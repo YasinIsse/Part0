@@ -1,0 +1,53 @@
+4) STEPS WHEN USER CREATES A NEW NOTE
+
+1. User adds new note in field and presses submit:  HTTP POST http://....com/new_note  Data= TEST123  
+
+2. Server responds with Status code: 302 Found  ---Redirects to the notes page.
+
+3. The browser does a HTTP GET request with the /notes url  
+
+4. Server responds with the html code
+
+5. Browers makes another HTTP GET request for the main.css file
+
+6. Server responds wtih the main.css file 
+
+7. Browers makes another HTTP GET request for the main.js script
+
+8. Server responds wtih the main.js script 
+
+9. Browers runs js script and makes another HTTP GET request for the /data.json
+
+10. Server responds wtih the json data with the added field by new_note
+
+11. Browser excutes js code and renders the json data on the page
+
+
+5) STEPS FOR SPA PAGE
+
+1. Browers does Http get request for /spa url
+
+2. Server responds with HTML code
+
+3. Browers makes another HTTP GET request for the main.css file
+
+4. Server responds wtih the main.css file 
+
+5. Browers makes another HTTP GET request for the main.js script
+
+6. Server responds wtih the main.js script 
+
+7. Browers runs js script and makes another HTTP GET request for the /data.json
+
+8. Server responds wtih the json data which is loaded onto the page with js code
+
+9. Browser excutes js code and renders the json data on the page
+
+
+6) STEPS FOR SPA PAGE NEW NOTE
+
+1. User adds new note in field and presses submit:  HTTP POST of the data with the js script.  
+
+2. Server Responds with Status code: 201 Create and {"message":"note created"}
+
+3. Browser excutes js code and renders the json data on the page
